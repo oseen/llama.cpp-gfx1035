@@ -243,11 +243,7 @@ jobs:
             echo "Moving $zip_file to release/$zip_name"
             mv "$zip_file" "release/$zip_name"
           done
-
-          echo "Moving other artifacts..."
-          mv -v artifact/*.zip release
-          mv -v artifact/*.tar.gz release
-
+          
       - name: Create release
         id: create_release
         uses: ggml-org/action-create-release@v1
